@@ -1,10 +1,21 @@
-import { readFile } from "./readFile";
+export const findLargerMesurementsForStrings = (stringArr: string[]) => {
+  let numArr: number[] = [];
 
-export const findLargerMesurements = (numArr) => {
-  const firstNum = numArr[0];
+  for(let i:number = 0; i < stringArr.length; i++) {
+    let parsedNum:number = parseInt(stringArr[i]);
+    numArr.push(parsedNum);
+  }
+
+  const largerMeasurements = findLargerMesurements(numArr);
+
+  return largerMeasurements;
+}
+
+export const findLargerMesurements = (numArr: number[]) => {
+
   let largerThan = 0;
 
-  if (numArr[1] > firstNum) {
+  if (numArr[1] > numArr[0]) {
       largerThan = largerThan + 1;
   }
 
@@ -17,6 +28,6 @@ export const findLargerMesurements = (numArr) => {
       }
     }
   }
-    return largerThan;
+  return largerThan;
 }
 

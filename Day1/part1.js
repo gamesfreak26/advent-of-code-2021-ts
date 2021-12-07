@@ -1,10 +1,19 @@
 "use strict";
 exports.__esModule = true;
-exports.findLargerMesurements = void 0;
+exports.findLargerMesurements = exports.findLargerMesurementsForStrings = void 0;
+var findLargerMesurementsForStrings = function (stringArr) {
+    var numArr = [];
+    for (var i = 0; i < stringArr.length; i++) {
+        var parsedNum = parseInt(stringArr[i]);
+        numArr.push(parsedNum);
+    }
+    var largerMeasurements = (0, exports.findLargerMesurements)(numArr);
+    return largerMeasurements;
+};
+exports.findLargerMesurementsForStrings = findLargerMesurementsForStrings;
 var findLargerMesurements = function (numArr) {
-    var firstNum = numArr[0];
     var largerThan = 0;
-    if (numArr[1] > firstNum) {
+    if (numArr[1] > numArr[0]) {
         largerThan = largerThan + 1;
     }
     for (var i = 2; i < numArr.length; i++) {
