@@ -2,7 +2,7 @@ import { findLargerMesurements, findLargerMesurementsForStrings } from "../Day1/
 import { readFile } from "../Day1/readFile";
 const fs = require('fs');
 import * as path from 'path';
-import { findLargerWindowMesurements } from "../Day1/part2";
+import { findLargerWindowMesurements, findLargerWindowsMesurementsForStrings } from "../Day1/part2";
 
 describe('Day 1 Part A', () => {
   test('returns the correct value', () => {
@@ -32,5 +32,18 @@ describe('Day1 Part2', () => {
     const actual = findLargerWindowMesurements(report);
 
     expect(actual).toBe(5);
+  });
+
+  test('should return the correct value after reading the input file', () => {
+    const file = readFile(
+      path.join(
+        __dirname, 
+        '../../adventOfCode/Day1/inputs/input1.txt'
+      )
+    );
+
+    const actual = findLargerWindowsMesurementsForStrings(file);
+
+    expect(actual).toBe(1811);
   });
 });
