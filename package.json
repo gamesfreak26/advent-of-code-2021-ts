@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "jest",
-    "task1a": "ts-node Day1/task1-part1.ts"
+    "task1a": "ts-node Day1/task1-part1.ts",
+    "task1b": "ts-node Day1/task1-part2.ts"
   },
   "dependencies": {
     "@types/jest": "^27.0.3"
