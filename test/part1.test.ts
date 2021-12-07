@@ -12,9 +12,14 @@ describe('Day 1', () => {
   });
 
   test('Part1 should return the correct value after reading the input file', () => {
-    const file = readFile(path.join(__dirname, '../../adventOfCode/Day1/inputs/input1.txt'));
+    const file = readFile(
+      path.join(
+        __dirname, 
+        '../../adventOfCode/Day1/inputs/input1.txt'
+      )
+    );
     const actual = findLargerMesurementsForStrings(file);
 
-    expect(actual).toBe(7);
+    expect(actual).toBe(1288);
   });
 });
