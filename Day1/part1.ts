@@ -1,5 +1,22 @@
-const report: number[] = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263];
+import { readFile } from "./readFile";
 
-for (let i = 1; i < report.length; i++) {
-    
+export const findLargerMesurements = (numArr) => {
+    const firstNum = numArr[0];
+    let largerThan = 0;
+
+    if (numArr[1] > firstNum) {
+        largerThan = largerThan + 1;
+    }
+
+    for (let i:number = 2; i < numArr.length; i++) {
+        if(i >= numArr.length) {
+            break;
+        } else {
+            if (numArr[i] > numArr[i - 1]) {
+                largerThan = largerThan + 1;
+            }
+        }
+    }
+    return largerThan;
 }
+
