@@ -1,6 +1,5 @@
 import { findLargerMesurements, findLargerMesurementsForStrings } from "../Day1/part1";
 import { readFile } from "../Day1/readFile";
-const fs = require('fs');
 import * as path from 'path';
 import { findLargerWindowMesurements, findLargerWindowsMesurementsForStrings } from "../Day1/part2";
 

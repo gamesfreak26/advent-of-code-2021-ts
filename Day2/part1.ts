@@ -7,7 +7,7 @@ let report:string[] = [
   'forward 2'
 ]
 
-export const day2a = (directionsArr) => {
+export const mulplication = (directionsArr: string[]) => {
   // array of arrays
   let splitdirectionsArr = directionsArr.map(val => val.split(' '));
 
@@ -36,4 +36,6 @@ export const day2a = (directionsArr) => {
   return horizontalPosition * verticalPosition;
 }
 
-
+export const splitArrayByNewLines = (stringArr) => {
+  return stringArr.split('\n');
+} 
