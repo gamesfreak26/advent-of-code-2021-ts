@@ -7,35 +7,33 @@ let report:string[] = [
   'forward 2'
 ]
 
-export const task1 = (directionsArr: string[]) => {
+export const task2 = (directionsArr: string[]) => {
   // array of arrays
   let splitdirectionsArr = directionsArr.map(val => val.split(' '));
-
+  
   let horizontalPosition: number = 0;
-  let verticalPosition: number = 0;
-
+  let verticalPosition: number = 0; // detpth
+  let aim: number = 0;
+  
   splitdirectionsArr.map(directionPosition => {
     let direction: string = directionPosition[0];
     let positionString: string = directionPosition[1];
-
+  
     let position: number = parseInt(positionString);
-
+  
     switch (direction) {
       case 'forward':
         horizontalPosition += position;
+        verticalPosition += aim * position;
         break;
       case 'up':
-        verticalPosition -= position;
+        aim -= position;
         break;
       case 'down':
-        verticalPosition += position;
+        aim += position;
         break;
     }
   });
-
+  
   return horizontalPosition * verticalPosition;
 }
-
-export const splitArrayByNewLines = (stringArr) => {
-  return stringArr.split('\n');
-} 

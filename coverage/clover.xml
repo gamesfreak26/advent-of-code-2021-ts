@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1638933987183" clover="3.2.0">
-  <project timestamp="1638933987184" name="All files">
-    <metrics statements="51" coveredstatements="51" conditionals="5" coveredconditionals="5" methods="11" coveredmethods="11" elements="67" coveredelements="67" complexity="0" loc="51" ncloc="51" packages="2" files="4" classes="4"/>
+<coverage generated="1638936049600" clover="3.2.0">
+  <project timestamp="1638936049600" name="All files">
+    <metrics statements="70" coveredstatements="70" conditionals="8" coveredconditionals="8" methods="14" coveredmethods="14" elements="92" coveredelements="92" complexity="0" loc="70" ncloc="70" packages="2" files="5" classes="5"/>
     <package name="Day1">
       <metrics statements="32" coveredstatements="32" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
       <file name="part1.js" path="/home/tkasth/Documents/repos/adventOfCode/Day1/part1.js">
@@ -41,13 +41,13 @@
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
       </file>
     </package>
     <package name="Day2">
-      <metrics statements="19" coveredstatements="19" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
+      <metrics statements="38" coveredstatements="38" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7"/>
       <file name="part1.ts" path="/home/tkasth/Documents/repos/adventOfCode/Day2/part1.ts">
         <metrics statements="19" coveredstatements="19" conditionals="3" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
@@ -68,7 +68,29 @@
         <line num="32" count="367" type="stmt"/>
         <line num="36" count="2" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+      </file>
+      <file name="part2.ts" path="/home/tkasth/Documents/repos/adventOfCode/Day2/part2.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1006" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="1006" type="stmt"/>
+        <line num="20" count="1006" type="stmt"/>
+        <line num="22" count="1006" type="stmt"/>
+        <line num="24" count="1006" type="cond" truecount="3" falsecount="0"/>
+        <line num="26" count="432" type="stmt"/>
+        <line num="27" count="432" type="stmt"/>
+        <line num="28" count="432" type="stmt"/>
+        <line num="30" count="207" type="stmt"/>
+        <line num="31" count="207" type="stmt"/>
+        <line num="33" count="367" type="stmt"/>
+        <line num="34" count="367" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
       </file>
     </package>
   </project>
