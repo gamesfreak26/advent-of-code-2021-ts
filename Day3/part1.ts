@@ -13,7 +13,7 @@ const report: string[] = [
   "01010"
 ];
 
-export const task1Example = (diagnosticReport: string[]) => {
+export const task1 = (diagnosticReport: string[]) => {
 
   let diagnosticReportRecordLength = diagnosticReport[0].length;
 
@@ -46,4 +46,4 @@ export const task1Example = (diagnosticReport: string[]) => {
 }
 
 
-task1Example(report);
+task1(report);
