@@ -44,6 +44,6 @@ describe('Day1 Part2', () => {
 
     const actual = findLargerWindowsMesurementsForStrings(file);
 
-    expect(actual).toBe(1811);
+    expect(actual).toBe(1311);
   });
 });
