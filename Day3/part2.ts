@@ -14,42 +14,62 @@ const report: string[] = [
 ];
 
 // Find the oxygen rating and Co2 Scrubber Rating.
-const task2 = (diagnosticReport: string[]) => {
+export const task2 = (diagnosticReport: string[]) => {
 
+  let oxygenGeneratorRating: string[] = diagnosticReport;
+  let CO2ScrubberRating: string[] = diagnosticReport;
   let diagnosticReportRecordLength = diagnosticReport[0].length;
   
-  let digitOnes: number[] = new Array(
-    diagnosticReportRecordLength
-  ).fill(0);
+  for (let j: number = 0; j < diagnosticReportRecordLength; j++) {
 
-  let digitZeroes: number[] = new Array(
-    diagnosticReportRecordLength
-  ).fill(0);
+    if (j === (diagnosticReportRecordLength - 1)) {
+      oxygenGeneratorRating = oxygenGeneratorRating
+        .filter(record => record[j] === '1');
 
-  diagnosticReport.map((record: string) => {
-      for(let k = 0; k < 1; k++) {
-        ( record[k] === '1' ) ? digitOnes[k]++ : digitZeroes[k]++;
+      CO2ScrubberRating = CO2ScrubberRating
+        .filter(record => record[j] === '0');
+
+      const o2Rating = parseInt(oxygenGeneratorRating[0], 2);
+      const c02Rating = parseInt(CO2ScrubberRating[0], 2);
+
+      return o2Rating * c02Rating;
+    }
+
+    let digitOnes: number = 0;
+    let digitZeroes: number = 0;
+
+    let co2DigitOnes: number = 0;
+    let co2DigitZeroes: number = 0;
+
+    diagnosticReport.forEach(line => {
+      (line[j] === '1') ? digitOnes++ : digitZeroes++; 
+    })
+
+    diagnosticReport.forEach(line => {
+      (line[j] === '0') ? co2DigitZeroes++ : co2DigitOnes++; 
+    })
+
+    if (digitOnes > digitZeroes) {
+      oxygenGeneratorRating = oxygenGeneratorRating
+        .filter(record => record[j] === '1');
+    }
+    else {
+      oxygenGeneratorRating = oxygenGeneratorRating
+        .filter(record => record[j] === '0');
+    }
+
+    if (CO2ScrubberRating.length >= 1) {
+      if (co2DigitZeroes < co2DigitZeroes) {
+        CO2ScrubberRating = CO2ScrubberRating
+          .filter(record => record[j] === '0');
       }
-    });
-
-  let filteredDiagnosticReport: string[] = []
-
-  for (let i = 0; i < diagnosticReportRecordLength; i++) {
-
-    if (filteredDiagnosticReport.length === 1) {
-      break;
+      else if (co2DigitZeroes < co2DigitZeroes) {
+        CO2ScrubberRating = CO2ScrubberRating
+          .filter(record => record[j] === '1');
+      }
     }
 
-    if (digitOnes[i] >= digitZeroes[i]) {
-      filteredDiagnosticReport = filteredDiagnosticReport.filter(record => record[i] === '1')
-    } else {
-      filteredDiagnosticReport = filteredDiagnosticReport.filter(record => record[i] === '0')
-    }
-
-    
   }
-
-  const a = 5;
 }
 
 task2(report);
