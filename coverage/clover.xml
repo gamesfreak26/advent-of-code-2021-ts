@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1638951147727" clover="3.2.0">
-  <project timestamp="1638951147727" name="All files">
-    <metrics statements="89" coveredstatements="89" conditionals="14" coveredconditionals="14" methods="15" coveredmethods="15" elements="118" coveredelements="118" complexity="0" loc="89" ncloc="89" packages="3" files="6" classes="6"/>
+<coverage generated="1639009204905" clover="3.2.0">
+  <project timestamp="1639009204905" name="All files">
+    <metrics statements="90" coveredstatements="90" conditionals="14" coveredconditionals="14" methods="16" coveredmethods="15" elements="120" coveredelements="119" complexity="0" loc="90" ncloc="90" packages="3" files="6" classes="6"/>
     <package name="Day1">
       <metrics statements="32" coveredstatements="32" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
       <file name="part1.js" path="/home/tkasth/Documents/repos/adventOfCode/Day1/part1.js">
@@ -94,9 +94,9 @@
       </file>
     </package>
     <package name="Day3">
-      <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="1"/>
       <file name="part1.ts" path="/home/tkasth/Documents/repos/adventOfCode/Day3/part1.ts">
-        <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="18" count="3" type="stmt"/>
@@ -116,6 +116,7 @@
         <line num="43" count="3" type="stmt"/>
         <line num="45" count="3" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
   </project>
