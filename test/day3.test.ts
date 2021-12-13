@@ -60,4 +60,18 @@ describe('Day 3 Part 2', () => {
     const actual = task2(report);
     expect(actual).toBe(230);
   });
+
+  test('should return the correct value with the example given', () => {
+    const file = readFile(
+      path.join(
+        __dirname, 
+        '../../adventOfCode/Day3/inputs/input.txt'
+      )
+    );
+
+    const splitFile = splitArrayByNewLines(file);
+
+    const actual = task2(splitFile);
+    expect(actual).toBe(1);
+  });
 });
