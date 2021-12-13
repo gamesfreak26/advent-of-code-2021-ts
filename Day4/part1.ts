@@ -12,17 +12,14 @@ const task1 = (input: string[]) => {
   const splitFile = file.split('\n\n');
 
   const randomNumbers = splitFile[0];
-  
   let boardsStrings = [];
  
-  
-  // Each board is an array of length 5 but is the string of numbers.
   for (let i = 1; i < splitFile.length; i++) {
       boardsStrings.push(splitFile[i].split('\n'));
   }
+  // All boards in a multidimensional array.  
+  let filteredBoards = filterBoards(boardsStrings);
 
-  const filteredBoards = filterBoards(boardsStrings);
-  let a = 5;
 }
 
 const filterBoards = (boardArr: string[]) => {
@@ -40,9 +37,13 @@ const filterBoards = (boardArr: string[]) => {
   for (let x = 0; x < boards.length; x++) {
     filteredBoards.push(boards[x].filter((val: string) => val));
   }
-  
-  return filteredBoards;
+
+  let boardContent = [];
+  for (let j = 0; j < filteredBoards.length; j+=5) {
+    boardContent.push(filteredBoards.slice(j, j+5));
+  }
+
+  return boardContent;
 }
 
 task1(file);
-let a = 5;
