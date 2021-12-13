@@ -14,7 +14,8 @@
     "task1b": "ts-node Day1/task1-part2.ts",
     "task2a": "ts-node Day2/part1.ts",
     "task3a": "ts-node Day3/part1.ts",
-    "task3b": "ts-node Day3/part2.ts"
+    "task3b": "ts-node Day3/part2.ts",
+    "task4a": "ts-node Day4/part1.ts"
   },
   "dependencies": {
     "@types/jest": "^27.0.3"
