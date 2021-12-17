@@ -11,14 +11,43 @@ const file = readFile(
 const task1 = (input: string[]) => {
   const splitFile = file.split('\n\n');
 
+  let rndNumberSliced: string[] = [];
+
   const randomNumbers = splitFile[0];
+  const splitrandomNumbers = randomNumbers.split(',');
+  
+  for (let a = 0; a < splitrandomNumbers.length; a += 5) {
+    let slice = splitrandomNumbers.slice(a, a+5);
+    rndNumberSliced.push(slice);
+  }
+  
+
+
   let boardsStrings = [];
  
   for (let i = 1; i < splitFile.length; i++) {
       boardsStrings.push(splitFile[i].split('\n'));
   }
-  // All boards in a multidimensional array.  
-  let filteredBoards = filterBoards(boardsStrings);
+  // All boards in a multidimensional array as strings.  
+  let filteredBoardStrings = filterBoards(boardsStrings);
+
+  let sum = 0;
+  let winningBoard = -1;
+
+  for (let h = 0; h < rndNumberSliced.length; h++) {
+    for(let i = 0; i < filteredBoardStrings.length; i++) {
+      if (rndNumberSliced[h].includes(filteredBoardStrings[i])) {
+        filteredBoardStrings[i] = '-1';
+      } 
+    }
+    // check winning board
+  }
+
+  let b = 5;
+}
+
+const checkWinningBoard = (board) => {
+
 
 }
 
@@ -38,12 +67,8 @@ const filterBoards = (boardArr: string[]) => {
     filteredBoards.push(boards[x].filter((val: string) => val));
   }
 
-  let boardContent = [];
-  for (let j = 0; j < filteredBoards.length; j+=5) {
-    boardContent.push(filteredBoards.slice(j, j+5));
-  }
-
-  return boardContent;
+  // make the multidimensional array into just a normal array
+  return filteredBoards.flat();
 }
 
 task1(file);
